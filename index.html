@@ -40,44 +40,98 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MusicEvent",
-  "name": "4E20 Day",
-  "description": "Un festival a Km 0. Musica, balli, food e tanto altro al Parco Giorcelli di Quattromiglia, Rende (CS). Free Entry.",
-  "url": "https://www.4e20day.com",
-  "startDate": "2026-05-16T14:00:00",
-  "endDate": "2026-05-17T01:00:00",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "isAccessibleForFree": true,
-  "location": {
-    "@type": "Place",
-    "name": "Parco Giorcelli",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Quattromiglia",
-      "addressLocality": "Rende",
-      "addressRegion": "CS",
-      "addressCountry": "IT"
+  "@graph": [
+    {
+      "@type": "MusicEvent",
+      "name": "4E20 Day",
+      "description": "Festival musicale gratuito al Parco Giorcelli di Quattromiglia, Rende (CS), Calabria. 16 Maggio 2026, dalle 14:00 alle 01:00. Free Entry.",
+      "url": "https://www.4e20day.com",
+      "startDate": "2026-05-16T14:00:00",
+      "endDate": "2026-05-17T01:00:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "isAccessibleForFree": true,
+      "keywords": "festival musicale calabria 2026, evento gratuito rende, festival cosenza 2026, quattromiglia rende, università della calabria",
+      "location": {
+        "@type": "Place",
+        "name": "Parco Giorcelli",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Via Quattromiglia",
+          "addressLocality": "Rende",
+          "addressRegion": "CS",
+          "postalCode": "87036",
+          "addressCountry": "IT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.334,
+          "longitude": 16.215
+        },
+        "containedInPlace": {
+          "@type": "City",
+          "name": "Rende",
+          "description": "Comune in provincia di Cosenza, Calabria, sede dell'Università della Calabria"
+        }
+      },
+      "image": "https://www.4e20day.com/logo-4e20.png",
+      "organizer": {
+        "@type": "Organization",
+        "name": "4E20 Day",
+        "url": "https://www.4e20day.com",
+        "sameAs": ["https://www.instagram.com/quattro_e20/"]
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-01-01T00:00:00",
+        "url": "https://www.4e20day.com"
+      },
+      "performer": {
+        "@type": "MusicGroup",
+        "name": "4E20 Day Artists"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Cosa fare a Rende il 16 Maggio 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il 16 Maggio 2026 a Rende si svolge il 4E20 Day, un festival musicale gratuito al Parco Giorcelli di Quattromiglia. L'evento offre musica live, balli, food zone e tante attività, dalle 14:00 all'01:00. Ingresso libero."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dove si svolge il 4E20 Day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il 4E20 Day si svolge al Parco Giorcelli di Quattromiglia, nel comune di Rende (CS), Calabria. La location è facilmente raggiungibile dall'Università della Calabria e dal centro di Cosenza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'evento 4E20 Day è gratuito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, il 4E20 Day è completamente gratuito. Free Entry per tutti, dalle 14:00 all'01:00 del 16-17 Maggio 2026 al Parco Giorcelli di Rende."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Chi organizza il 4E20 Day a Rende?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il 4E20 Day è organizzato dalla community di Quattromiglia con il supporto di Wisea Eventi e il patrocinio del Comune di Rende. È un festival musicale a km 0 che valorizza il territorio di Rende e Cosenza."
+          }
+        }
+      ]
     }
-  },
-  "image": "https://www.4e20day.com/logo-4e20.png",
-  "organizer": {
-    "@type": "Organization",
-    "name": "4E20 Day",
-    "url": "https://www.4e20day.com"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/InStock",
-    "validFrom": "2026-01-01T00:00:00",
-    "url": "https://www.4e20day.com"
-  },
-  "performer": {
-    "@type": "MusicGroup",
-    "name": "4E20 Day Artists"
-  }
+  ]
 }
 </script>
 
@@ -901,6 +955,59 @@
   .dot-b { background: var(--blue); }
   .dot-g { background: var(--green); }
 
+  /* ─── FAQ ─── */
+  .faq-section {
+    background: var(--white);
+    border-bottom: var(--border);
+  }
+
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 48px 64px;
+  }
+
+  .faq-item {
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    padding: 28px 0;
+  }
+
+  .faq-item:last-child { border-bottom: none; }
+
+  .faq-question {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: clamp(15px, 1.6vw, 17px);
+    color: var(--black);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .faq-question::before {
+    content: 'Q';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: var(--yellow);
+    background: var(--black);
+    min-width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+    color: var(--black);
+    opacity: 0.7;
+    line-height: 1.7;
+    padding-left: 40px;
+  }
+
   /* ─── RESPONSIVE ─── */
   @media (max-width: 768px) {
     nav { padding: 0 24px; }
@@ -941,6 +1048,8 @@
     .patrocinio-grid { gap: 40px; }
     .patrocinio-divider { display: none; }
 
+    .faq-list { padding: 0 24px 48px; }
+
     footer { padding: 28px 24px; }
     .footer-top { flex-direction: column; gap: 20px; text-align: center; }
     .footer-bottom { flex-direction: column; gap: 12px; }
@@ -957,6 +1066,7 @@
     <li><a href="#event-info">Info Evento</a></li>
     <li><a href="#lineup">Line Up</a></li>
     <li><a href="#mappa">Mappa</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
   <button class="nav-burger" id="burger" aria-label="Menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -1018,7 +1128,7 @@
 <section class="community">
   <h2 class="community-title">FROM 4MILES<br>FOR 4MILES</h2>
   <p class="community-text">
-    Da Quattromiglia, per Quattromiglia. Un evento pensato per valorizzare il nostro territorio, portando energia, musica e cultura direttamente nel cuore della nostra comunità.
+    Da Quattromiglia, per Quattromiglia. Un festival musicale a km 0 pensato per valorizzare il territorio di Rende e Cosenza, portando energia, musica e cultura direttamente nel cuore della nostra comunità — a due passi dall'<a href="https://www.unical.it" target="_blank" rel="noopener" style="color:var(--yellow);text-decoration:underline;">Università della Calabria</a>. Il Festival Musicale Calabria 2026 che nasce dal basso, con il patrocinio del <a href="https://www.comune.rende.cs.it" target="_blank" rel="noopener" style="color:var(--yellow);text-decoration:underline;">Comune di Rende</a>.
   </p>
 </section>
 
@@ -1268,13 +1378,47 @@
   </div>
 </section>
 
+<!-- ─── FAQ ─── -->
+<section class="faq-section" id="faq">
+  <div class="festival-header">
+    <div class="festival-header-bar"></div>
+    <h2>FAQ</h2>
+  </div>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <p class="faq-question">Cosa fare a Rende il 16 Maggio 2026?</p>
+      <p class="faq-answer">Il 16 Maggio 2026 a Rende si svolge il <strong>4E20 Day</strong>, un festival musicale gratuito al Parco Giorcelli di Quattromiglia. L'evento offre musica live, balli, food zone e tante attività, dalle 14:00 all'01:00. Ingresso libero per tutti.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Dove si svolge il 4E20 Day?</p>
+      <p class="faq-answer">Il 4E20 Day si svolge al <strong>Parco Giorcelli di Quattromiglia</strong>, nel comune di Rende (CS), Calabria. La location è facilmente raggiungibile dall'Università della Calabria e dal centro di Cosenza.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">L'evento 4E20 Day è gratuito?</p>
+      <p class="faq-answer">Sì, il 4E20 Day è <strong>completamente gratuito</strong>. Free Entry per tutti — nessun biglietto, nessuna prenotazione. Ti aspettiamo dalle 14:00 all'01:00 del 16-17 Maggio 2026.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Chi organizza il 4E20 Day a Rende?</p>
+      <p class="faq-answer">Il 4E20 Day è organizzato dalla community di Quattromiglia con il supporto di <strong>Wisea Eventi</strong> e il patrocinio del <strong>Comune di Rende</strong>. Un festival musicale a km 0 che valorizza il territorio di Rende e della provincia di Cosenza.</p>
+    </div>
+
+  </div>
+</section>
+
 <!-- ─── FOOTER ─── -->
 <footer>
   <div class="footer-top">
     <div class="footer-logo">4E20 DAY</div>
     <ul class="footer-links">
+      <li><a href="https://www.instagram.com/quattro_e20/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        instagram
+      </a></li>
       <li><a href="#">privacy policy</a></li>
-      <li><a href="#">terms of service</a></li>
       <li><a href="#">contact us</a></li>
     </ul>
   </div>
